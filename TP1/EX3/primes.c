@@ -6,14 +6,31 @@
 // A function can be declared as static function by placing the static keyword
 // before the function name
 
-static bool    is_prime(int n)
-{
-    // write is_prime function code here
-}
+//I had to change the type of the function since my text editor and compiler didn't understand the bool type
 
+int is_prime(int n){
+    if (n==2)
+    {
+        return 1;
+    }
+
+    for (int i = 2; i < n; i++)
+    {
+        if(n%i==0){
+            return 0;
+        }
+    }
+    return 1;
+}
 
 void    get_primes(int n)
 {
-    // write get_primes function code here that use is_prime function
+    for (int i = 2; i < n; i++)
+    {
+        if(is_prime(i)==1){
+            printf("%d\n",i);
+        }
+    }
+    return;
 }
 
