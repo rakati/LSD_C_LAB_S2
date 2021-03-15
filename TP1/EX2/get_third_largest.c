@@ -7,5 +7,22 @@
 */
 int     get_third_largest(int *tab, int size)
 {
-        // write your algo here
+    int p=0,q=0,r=0;
+    srand(time(0));
+    for(int i=0;i<1000;i++){
+        array[i]=rand();
+        if (array[i]>p){
+            r=q;
+            q=p;
+            p=array[i];
+        }
+        if (array[i]>q && array[i]<p){
+            r=q;
+            q=array[i];
+        }
+        if (array[i]>r && array[i]<q){
+            r=array[i];
+        }
+    }
+    return r;
 }
