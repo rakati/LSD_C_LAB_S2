@@ -2,5 +2,7 @@
 
 int recursive_fibo(int n)
 {
-    // write your recursive fibo code here
+    if(n<=1)
+        return n;
+    return rec_fib(n-1)+rec_fib(n-2);
 }
