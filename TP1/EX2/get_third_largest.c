@@ -8,9 +8,7 @@
 int     get_third_largest(int *tab, int size)
 {
     int p=0,q=0,r=0;
-    srand(time(0));
     for(int i=0;i<size;i++){
-        tab[i]=rand();
         if (tab[i]>p){
             r=q;
             q=p;
