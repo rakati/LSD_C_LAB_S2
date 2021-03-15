@@ -6,9 +6,8 @@
 // A function can be declared as static function by placing the static keyword
 // before the function name
 
-//I had to change the type of the function since my text editor and compiler didn't understand the bool type
-
-int is_prime(int n){
+static bool is_prime(int n)
+{
     if (n==2)
     {
         return 1;
