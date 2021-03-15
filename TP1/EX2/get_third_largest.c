@@ -9,19 +9,19 @@ int     get_third_largest(int *tab, int size)
 {
     int p=0,q=0,r=0;
     srand(time(0));
-    for(int i=0;i<1000;i++){
-        array[i]=rand();
-        if (array[i]>p){
+    for(int i=0;i<size;i++){
+        tab[i]=rand();
+        if (tab[i]>p){
             r=q;
             q=p;
-            p=array[i];
+            p=tab[i];
         }
-        if (array[i]>q && array[i]<p){
+        if (tab[i]>q && tab[i]<p){
             r=q;
-            q=array[i];
+            q=tab[i];
         }
-        if (array[i]>r && array[i]<q){
-            r=array[i];
+        if (tab[i]>r && tab[i]<q){
+            r=tab[i];
         }
     }
     return r;
